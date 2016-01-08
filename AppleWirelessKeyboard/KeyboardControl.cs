@@ -74,8 +74,8 @@ namespace AppleWirelessKeyboard
         {
             Task.Factory.StartNew(() =>
             {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.PlayPause();
+                if (SpotifyControl.SpotifyRunning)
+                    SpotifyControl.PlayPause();
                 else
                     Send(VK_MEDIA_PLAY_PAUSE);
                 NotificationCenter.NotifyPlayPause();
@@ -86,8 +86,8 @@ namespace AppleWirelessKeyboard
         {
             Task.Factory.StartNew(() =>
             {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.NextSong();
+                if (SpotifyControl.SpotifyRunning)
+                    SpotifyControl.NextSong();
                 else
                     Send(VK_MEDIA_NEXT_TRACK);
                 NotificationCenter.NotifyNext();
@@ -98,8 +98,8 @@ namespace AppleWirelessKeyboard
         {
             Task.Factory.StartNew(() =>
             {
-                if (iTunesControl.iTunesRunning)
-                    iTunesControl.PreviousSong();
+                if (SpotifyControl.SpotifyRunning)
+                    SpotifyControl.PreviousSong();
                 else
                     Send(VK_MEDIA_PREV_TRACK);
                 NotificationCenter.NotifyPrevious();
